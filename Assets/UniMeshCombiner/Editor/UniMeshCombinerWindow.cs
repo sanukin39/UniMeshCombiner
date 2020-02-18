@@ -53,7 +53,7 @@ namespace UniMeshCombiner
 
                     var newMesh = new Mesh
                     {
-                        vertices = vertices.ToArray(), triangles = triangles.ToArray(), uv = mesh.uv
+                        vertices = vertices.ToArray(), triangles = triangles.ToArray(), uv = mesh.uv, normals = mesh.normals
                     };
 
                     if (!combineMeshInstanceDictionary.ContainsKey(material))
@@ -80,12 +80,6 @@ namespace UniMeshCombiner
                 var mesh = new Mesh();
                 mesh.CombineMeshes(kvp.Value.ToArray());
                 Unwrapping.GenerateSecondaryUVSet(mesh);
-                mesh.RecalculateNormals();
-                mesh.RecalculateTangents();
-                mesh.RecalculateBounds();
-
-                var uvs = new List<Vector2>();
-                kvp.Value[0].mesh.GetUVs(0, uvs);
 
                 meshFilter.sharedMesh = mesh;
                 newObject.transform.parent = _combineTarget.transform.parent;
