@@ -84,7 +84,7 @@ namespace UniMeshCombiner
                 meshFilter.sharedMesh = mesh;
                 newObject.transform.parent = _combineTarget.transform.parent;
 
-                if (!_exportMesh && _exportDirectory != null)
+                if (!_exportMesh || _exportDirectory != null)
                 {
                     return;
                 }
