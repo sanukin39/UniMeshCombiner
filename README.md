@@ -41,6 +41,11 @@ use unitypackage at [release](https://github.com/sanukin39/UniMeshCombiner/relea
 ## Author
 [sanukin39](https://github.com/sanukin39)
 
+## Reference
+[ScriptReference CombineMeshes](https://docs.unity3d.com/ScriptReference/Mesh.CombineMeshes.html)
+
+[Unityのシーン上に配置したモデルを結合する](http://tsubakit1.hateblo.jp/entry/2014/10/24/220610)
+
 ## Car Asset
 The great car model from [Unity Asset Store](https://assetstore.unity.com/packages/3d/vehicles/land/car-20128)
 
