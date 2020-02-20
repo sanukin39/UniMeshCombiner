@@ -86,7 +86,7 @@ namespace UniMeshCombiner
 
                 if (!_exportMesh || _exportDirectory == null)
                 {
-                    return;
+                    continue;
                 }
 
                 ExportMesh(mesh, kvp.Key.name);
